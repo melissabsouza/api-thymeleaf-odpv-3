@@ -25,7 +25,7 @@ public class UsuarioController {
     @GetMapping
     public String listarUsuarios(Model model) {
         List<UsuarioDTO> lista = usuarioService.findAll();
-        System.out.println("Lista de eventos: " + lista);
+        System.out.println("Lista de usuarios: " + lista);
         model.addAttribute("usuarios", lista);
         return "usuarios/lista";
 

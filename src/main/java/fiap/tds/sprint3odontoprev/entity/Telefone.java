@@ -2,6 +2,8 @@ package fiap.tds.sprint3odontoprev.entity;
 
 import fiap.tds.sprint3odontoprev.enums.TipoTelefone;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import lombok.Data;
 import lombok.ToString;
 
@@ -15,10 +17,13 @@ public class Telefone {
     @Column(name = "id_telefone")
     private Long id;
 
+    @Pattern(regexp = "\\d{2}\\s?(9\\d{4}-\\d{4}|\\d{4}-\\d{4})",
+            message = "Use XX 9XXXX-XXXX ou XX XXXX-XXXX")
     @Column(name = "numero_telefone", length = 15, nullable = false)
     private String numero;
 
     @Enumerated(EnumType.STRING)
+    @NotNull(message = "O tipo de telefone não pode ser nulo")
     @Column(name = "tipo_telefone", nullable = false)
     private TipoTelefone tipo;
 }

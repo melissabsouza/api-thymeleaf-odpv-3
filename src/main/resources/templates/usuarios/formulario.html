@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <title>Cadastro de Usuários</title>
@@ -26,7 +26,7 @@
             <li th:each="err : ${#fields.errors('email')}" th:text="${err}">ERRO</li>
 
             <label class="block text-black font-medium mb-2" for="senha">Senha</label>
-            <input class="w-96 p-3 border border-gray-300 rounded-lg" th:field="*{senha}" type="passoword" id="senha" name="senha" placeholder="Senha" required>
+            <input class="w-96 p-3 border border-gray-300 rounded-lg" th:field="*{senha}" type="password" id="senha" name="senha" placeholder="Senha" required>
             <li th:each="err : ${#fields.errors('senha')}" th:text="${err}">ERRO</li>
 
             <input type="hidden" th:field="*{status}">
