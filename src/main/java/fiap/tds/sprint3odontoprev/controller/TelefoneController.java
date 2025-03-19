@@ -37,7 +37,8 @@ public class TelefoneController {
         return "telefones/formulario";
     }
 
-    @PostMapping String salvarTelefone(@Valid @ModelAttribute("telefone") TelefoneDTO telefone, BindingResult bindingResults, Model model){
+    @PostMapping
+    public String salvarTelefone(@Valid @ModelAttribute("telefone") TelefoneDTO telefone, BindingResult bindingResults, Model model){
         if(bindingResults.hasErrors()){
             bindingResults.getAllErrors().forEach(e-> log.info(e.toString()));
             model.addAttribute("telefone", telefone);

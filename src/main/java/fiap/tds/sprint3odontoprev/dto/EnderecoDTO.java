@@ -36,8 +36,8 @@ public class EnderecoDTO {
     @NotBlank(message = "estado não pode ser nulo")
     private String estado;
 
-    @Pattern(regexp = "\\d{5}-\\d{3} ",
+    @Pattern(regexp = "\\d{5}-?\\d{3}",
             message = "Use XXXXX-XXX")
     @NotNull(message = "cep não pode ser nulo")
-    private Long cep;
+    private String cep;
 }

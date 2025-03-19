@@ -50,10 +50,10 @@ public class Endereco {
     @Column(name = "estado_endereco", length = 100, nullable = false)
     private String estado;
 
-    @Pattern(regexp = "\\d{5}-\\d{3} ",
+    @Pattern(regexp = "\\d{5}-?\\d{3}",
             message = "Use XXXXX-XXX")
     @NotNull(message = "cep não pode ser nulo")
     @Column(name = "cep", nullable = false)
-    private Long cep;
+    private String cep;
 
 }

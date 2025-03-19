@@ -15,7 +15,7 @@ CREATE TABLE T_CHALLENGE_ENDERECO (
                                       bairro_endereco VARCHAR(100) NOT NULL,
                                       cidade_endereco VARCHAR(100) NOT NULL,
                                       estado_endereco VARCHAR(100) NOT NULL,
-                                      cep INTEGER NOT NULL
+                                      cep VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE T_CHALLENGE_TELEFONE (
