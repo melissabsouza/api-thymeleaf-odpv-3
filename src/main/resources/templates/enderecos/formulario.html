@@ -41,11 +41,11 @@
             <input class="w-96 p-3 border border-gray-300 rounded-lg" th:field="*{cidade}" type="text" id="cidade" name="cidade" placeholder="Cidade">
             <li th:each="err : ${#fields.errors('cidade')}" th:text="${err}">ERRO</li>
 
-            <label class="block text-black font-medium mb-2" for="estado">Rua</label>
+            <label class="block text-black font-medium mb-2" for="estado">Estado</label>
             <input class="w-96 p-3 border border-gray-300 rounded-lg" th:field="*{estado}" type="text" id="estado" name="estado" placeholder="Estado">
             <li th:each="err : ${#fields.errors('estado')}" th:text="${err}">ERRO</li>
 
-            <label class="block text-black font-medium mb-2" for="cep">Rua</label>
+            <label class="block text-black font-medium mb-2" for="cep">CEP</label>
             <input class="w-96 p-3 border border-gray-300 rounded-lg" th:field="*{cep}" type="text" id="cep" name="cep" placeholder="XXXXX-XXX">
             <li th:each="err : ${#fields.errors('cep')}" th:text="${err}">ERRO</li>
 
