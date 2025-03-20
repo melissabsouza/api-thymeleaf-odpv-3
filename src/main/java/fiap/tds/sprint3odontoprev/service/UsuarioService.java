@@ -22,12 +22,15 @@ public class UsuarioService {
 
         if(usuarioDTO.getId()==null){
             System.out.println("Senha recebida: " + usuario.getSenha());
+            System.out.println("Status antes de salvar: " + usuario.getStatus());
             usuario = usuarioRepository.save(usuario);
         } else{
             UsuarioDTO byId = this.findById(usuarioDTO.getId());
             byId.setEmail(usuarioDTO.getEmail());
             byId.setSenha(usuarioDTO.getSenha());
             byId.setStatus(usuarioDTO.getStatus());
+
+            System.out.println("Status antes de salvar: " + usuario.getStatus());
 
             System.out.println("Senha recebida: " + usuario.getSenha());
 

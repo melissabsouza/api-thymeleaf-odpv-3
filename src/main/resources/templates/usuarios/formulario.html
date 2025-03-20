@@ -19,7 +19,7 @@
     <div class="flex items-center">
         <form th:action="@{/usuarios}" method="post" th:object="${usuario}">
 
-            <input type="hidden" th:field="*{id}">
+<!--            <input type="hidden" th:field="*{id}">-->
 
             <label class="block text-black font-medium mb-2" for="email">Email</label>
             <input class="w-96 p-3 border border-gray-300 rounded-lg" th:field="*{email}" type="email" id="email" name="email" placeholder="Email">
